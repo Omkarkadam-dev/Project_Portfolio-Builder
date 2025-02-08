@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Portfolio Builder</h1>
+        <form id="portfolioForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <textarea id="bio" placeholder="Short Bio" required></textarea>
+            <input type="text" id="skills" placeholder="Skills (comma separated)" required>
+            <textarea id="projects" placeholder="Projects (comma separated)" required></textarea>
+            <button type="submit">Generate Portfolio</button>
+        </form>
+
+        <div id="portfolioOutput" class="hidden">
+            <h2 id="portfolioName"></h2>
+            <p id="portfolioBio"></p>
+            <h3>Skills</h3>
+            <ul id="portfolioSkills"></ul>
+            <h3>Projects</h3>
+            <ul id="portfolioProjects"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
