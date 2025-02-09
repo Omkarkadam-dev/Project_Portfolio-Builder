@@ -1,46 +1,82 @@
+/* General Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
 }
 
+/* Container */
 .container {
     background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     width: 400px;
     text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
-input, textarea {
-    width: 100%;
-    margin: 10px 0;
+/* Form */
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background: #f0f0f0;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 8px;
+    margin: 10px 0;
 }
 
+.input-group i {
+    margin-right: 10px;
+    color: #555;
+}
+
+input,
+textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    resize: none;
+}
+
+/* Button */
 button {
     background: #007BFF;
     color: white;
-    padding: 10px;
+    padding: 12px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
 button:hover {
     background: #0056b3;
 }
 
+/* Portfolio Output */
 .hidden {
     display: none;
+}
+
+h3 {
+    color: #333;
+    font-size: 20px;
+    margin-top: 20px;
 }
 
 ul {
@@ -50,7 +86,28 @@ ul {
 
 ul li {
     background: #eee;
-    padding: 8px;
+    padding: 10px;
     margin: 5px 0;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+ul li::before {
+    content: "✔";
+    color: green;
+    margin-right: 10px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
